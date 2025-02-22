@@ -12,7 +12,7 @@
     <mat-chip-listbox>
       <mat-chip-option (click)="loadTasks()">All</mat-chip-option>
       <mat-chip-option *ngFor="let status of TaskStatus | keyvalue"
-                      (click)="loadTasks(status.value)">
+                      (click)="loadTasksByStatus(status.value)">
         {{status.value}}
       </mat-chip-option>
     </mat-chip-listbox>

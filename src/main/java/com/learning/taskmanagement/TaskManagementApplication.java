@@ -2,6 +2,7 @@ package com.learning.taskmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Main entry point for the Task Management application.
@@ -16,6 +17,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *    for bootstrapping the application.
  */
 @SpringBootApplication
+@ComponentScan(basePackages = {
+    "com.learning.taskmanagement",
+    "com.learning.taskmanagement.config"
+})
 public class TaskManagementApplication {
     public static void main(String[] args) {
         SpringApplication.run(TaskManagementApplication.class, args);
