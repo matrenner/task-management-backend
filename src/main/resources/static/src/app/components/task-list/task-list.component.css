@@ -1,0 +1,39 @@
+.task-list-container {
+  padding: 20px;
+}
+
+.task-card {
+  margin-bottom: 16px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.task-filters {
+  margin: 20px 0;
+}
+
+mat-card-subtitle {
+  margin-top: 8px;
+}
+
+.metadata {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+mat-card-actions {
+  padding: 8px;
+}
+
+mat-card-actions button {
+  margin-left: 8px;
+}

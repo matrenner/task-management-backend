@@ -1,14 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { Task, TaskStatus } from '../../models/task.model';
+import { CommonModule } from '@angular/common';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { TaskService } from '../../services/task.service';
-import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Task, TaskStatus } from '../../models/task.model';
 import { TaskFormComponent } from '../task-form/task-form.component';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatSnackBarModule
+  ]
 })
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];

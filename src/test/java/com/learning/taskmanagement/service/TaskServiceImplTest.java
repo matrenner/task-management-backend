@@ -1,25 +1,28 @@
 package com.learning.taskmanagement.service;
 
-import com.learning.taskmanagement.domain.Task;
-import com.learning.taskmanagement.domain.TaskStatus;
-import com.learning.taskmanagement.dto.TaskDTO;
-import com.learning.taskmanagement.exception.TaskNotFoundException;
-import com.learning.taskmanagement.repository.TaskRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import org.mockito.Mock;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.learning.taskmanagement.domain.Task;
+import com.learning.taskmanagement.domain.TaskStatus;
+import com.learning.taskmanagement.dto.TaskDTO;
+import com.learning.taskmanagement.exception.TaskNotFoundException;
+import com.learning.taskmanagement.repository.TaskRepository;
 
 /**
  * Unit tests for TaskServiceImpl.

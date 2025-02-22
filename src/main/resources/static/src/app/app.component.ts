@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { MaterialModule } from './material.module';
+import { RouterOutlet } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [RouterModule, MaterialModule],
-  standalone: true
+  standalone: true,
+  imports: [RouterOutlet, MatToolbarModule]
 })
-export class AppComponent { 
-   title: string = "task-management-frontend"
+export class AppComponent {
+  title = 'task-management-frontend';
 }
 
