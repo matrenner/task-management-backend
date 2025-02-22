@@ -7,7 +7,8 @@ import { Task, TaskStatus } from '../models/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:8080/api/tasks';
+  // Replace this URL with your Codespace's forwarded address for port 8080
+  private apiUrl = 'https://congenial-space-parakeet-69rrrrq964j2rj9p-8080.app.github.dev/api/tasks';
 
   constructor(private http: HttpClient) {}
 
