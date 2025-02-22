@@ -1,6 +1,7 @@
 package com.learning.taskmanagement.service;
 
 import com.learning.taskmanagement.domain.Task;
+import com.learning.taskmanagement.domain.TaskStatus;
 import com.learning.taskmanagement.dto.TaskDTO;
 import com.learning.taskmanagement.repository.TaskRepository;
 import com.learning.taskmanagement.exception.TaskNotFoundException;

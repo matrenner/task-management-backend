@@ -24,3 +24,8 @@ spring:
 # Server Configuration
 server:
   port: 8080
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
