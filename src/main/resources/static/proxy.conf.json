@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://congenial-space-parakeet-69rrrrq964j2rj9p-8080.app.github.dev",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

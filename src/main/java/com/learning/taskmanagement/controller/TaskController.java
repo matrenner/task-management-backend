@@ -1,14 +1,26 @@
 package com.learning.taskmanagement.controller;
 
-import com.learning.taskmanagement.dto.TaskDTO;
-import com.learning.taskmanagement.service.TaskService;
-import com.learning.taskmanagement.domain.TaskStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.learning.taskmanagement.domain.TaskStatus;
+import com.learning.taskmanagement.dto.TaskDTO;
+import com.learning.taskmanagement.service.TaskService;
+
+import jakarta.validation.Valid;
 /**
  * REST controller for Task operations.
  * 
@@ -20,7 +32,12 @@ import java.util.UUID;
  */
 @RestController
 @RequestMapping("/api/tasks")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(
+    origins = {"https://*.app.github.dev", "http://localhost:4200"},
+    allowedHeaders = "*",
+    methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
+    allowCredentials = "true"
+)
 public class TaskController {
     private final TaskService taskService;
 

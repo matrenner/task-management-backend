@@ -27,6 +27,20 @@ spring:
 
 server:
   port: 8080
+  forward-headers-strategy: framework
+  use-forward-headers: true
+  tomcat:
+    remote-ip-header: X-Forwarded-For
+    protocol-header: X-Forwarded-Proto
+  servlet:
+    context-path: /
+  error:
+    whitelabel:
+      enabled: false
+
+security:
+  basic:
+    enabled: false
 
 logging:
   level:
