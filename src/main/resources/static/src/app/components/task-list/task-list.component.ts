@@ -44,6 +44,7 @@ export class TaskListComponent implements OnInit {
   loadTasks(): void {
     this.taskService.getTasks().subscribe({
       next: (tasks) => {
+        console.log(tasks);
         this.tasks = tasks;
       },
       error: (error) => {
@@ -56,6 +57,7 @@ export class TaskListComponent implements OnInit {
   loadTasksByStatus(status?: TaskStatus): void {
     this.taskService.getTasksByStatus(status).subscribe({
       next: (tasks) => {
+        console.log(tasks);
         this.tasks = tasks;
       },
       error: (error) => {
