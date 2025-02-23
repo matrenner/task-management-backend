@@ -25,6 +25,7 @@ public class TaskDTO {
     private String title;
     
     private String description;
+
     private TaskStatus status;
 
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")

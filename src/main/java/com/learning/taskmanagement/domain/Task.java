@@ -32,8 +32,8 @@ public class Task {
 
     private String description;
 
+    @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private TaskStatus status;
 
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
