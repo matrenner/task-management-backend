@@ -1,10 +1,13 @@
 package com.learning.taskmanagement.dto;
 
-import com.learning.taskmanagement.domain.TaskStatus;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.learning.taskmanagement.domain.TaskStatus;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 /**
  * DTO for transferring Task data between layers.
@@ -23,8 +26,14 @@ public class TaskDTO {
     
     private String description;
     private TaskStatus status;
+
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
     private LocalDateTime dueDate;
+
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
     private final LocalDateTime createdAt;
+    
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
     private final LocalDateTime updatedAt;
 
     public TaskDTO(UUID id, String title, String description, TaskStatus status, 
