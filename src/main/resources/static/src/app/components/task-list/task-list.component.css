@@ -4,6 +4,31 @@
 
 .task-card {
   margin-bottom: 16px;
+  background-color: #f8f9fa;
+  border-left: 8px solid #3f51b5;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Status-specific card styling */
+.task-card.TODO {
+  border-left-color: #3f51b5; /* primary blue */
+}
+
+.task-card.IN_PROGRESS {
+  border-left-color: #ff4081; /* accent pink */
+}
+
+.task-card.COMPLETED {
+  border-left-color: #4caf50; /* green */
+}
+
+.task-card.CANCELLED {
+  border-left-color: #f44336; /* red */
 }
 
 .spacer {
